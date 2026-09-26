@@ -1,0 +1,11 @@
+# Entorno de Python
+venv/
+__pycache__/
+
+# Salidas de Manim (el video final se entrega aparte)
+media/
+
+# Binarios compilados
+bloom_demo
+bloom_demo.exe
+*.o

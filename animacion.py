@@ -6,11 +6,11 @@ class BloomFilterScene(Scene):
 
         titulo_principal = Text("Bloom Filter", font_size=60, color=BLUE)
         curso = Text("Algoritmos y Estructuras de Datos", font_size=24, color=GRAY).next_to(titulo_principal, UP)
-        nombres = Text("Por: Paul Maguiña, Rafael Choque y [Nombre 3]", font_size=24).next_to(titulo_principal, DOWN, buff=0.5)
+        nombres = Text("Por: Paul Maguiña, Rafael Choque y Enrique Torres", font_size=24).next_to(titulo_principal, DOWN, buff=0.5)
 
         self.play(Write(curso), Write(titulo_principal))
         self.play(FadeIn(nombres))
-        self.wait(8) # 8 segundos para la portada
+        self.wait(11)
         self.play(FadeOut(curso), FadeOut(titulo_principal), FadeOut(nombres))
 
 
@@ -24,7 +24,7 @@ class BloomFilterScene(Scene):
 
         self.play(Write(def_titulo))
         self.play(FadeIn(grupo_def, lag_ratio=0.5))
-        self.wait(15)
+        self.wait(20) # 20 SEGUNDOS PARA EXPLICAR LA DEFINICIÓN
         self.play(FadeOut(def_titulo), FadeOut(grupo_def))
 
 
@@ -38,7 +38,7 @@ class BloomFilterScene(Scene):
 
         self.play(Write(reglas_titulo))
         self.play(FadeIn(grupo_reglas, lag_ratio=0.5))
-        self.wait(15)
+        self.wait(23)
         self.play(FadeOut(reglas_titulo), FadeOut(grupo_reglas))
 
 
@@ -53,7 +53,7 @@ class BloomFilterScene(Scene):
 
         self.play(Write(usos_titulo), FadeIn(uso_sub))
         self.play(FadeIn(grupo_usos, lag_ratio=0.5))
-        self.wait(15) # 15 SEGUNDOS PARA LOS EJEMPLOS
+        self.wait(20)
         self.play(FadeOut(usos_titulo), FadeOut(uso_sub), FadeOut(grupo_usos))
 
 
@@ -177,5 +177,5 @@ class BloomFilterScene(Scene):
         self.play(FadeIn(grupo_t, lag_ratio=0.5))
         self.wait(15)
         self.play(FadeIn(grupo_e, lag_ratio=0.5))
-        self.wait(15)
+        self.wait(15) 
         self.play(FadeOut(Group(*self.mobjects)))
